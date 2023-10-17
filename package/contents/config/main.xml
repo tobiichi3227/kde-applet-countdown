@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+<kcfgfile name=""/>
+
+  <group name="Appearance">
+      <entry name="dataConfigPath" type="String">
+<!--           <label>Data Config Path (Json Format)</label> -->
+          <default></default>
+      </entry>
+
+      <entry name="nameFontFamily" type="String">
+          <label>Name Font Family</label>
+      </entry>
+
+      <entry name="dateFontFamily" type="String">
+          <label>Date Font Family</label>
+      </entry>
+
+      <entry name="countdownFontFamily" type="String">
+          <label>Countdown Font Family</label>
+      </entry>
+
+      <entry name="nameFontColor" type="Color">
+          <label>Name Font Color</label>
+          <default>#FFFFFF</default>
+      </entry>
+
+      <entry name="dateFontColor" type="Color">
+          <label>Date Font Color</label>
+          <default>#FFFFFF</default>
+      </entry>
+
+      <entry name="countdownFontColor" type="Color">
+          <label>Countdown Font Color</label>
+          <default>#FFFFFF</default>
+      </entry>
+
+      <entry name="nameFontSize" type="Int">
+          <label>Sets the size of name font in pixels.</label>
+          <default>50</default>
+      </entry>
+
+      <entry name="dateFontSize" type="Int">
+          <label>Sets the size of date font in pixels.</label>
+          <default>50</default>
+      </entry>
+
+      <entry name="countdownFontSize" type="Int">
+          <label>Sets the size of countdown font in pixels.</label>
+          <default>50</default>
+      </entry>
+
+      <entry name="switchTime" type="Int">
+          <label>Switch Time</label>
+          <default>5</default>
+      </entry>
+  </group>
+</kcfg>
