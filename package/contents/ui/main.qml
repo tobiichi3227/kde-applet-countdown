@@ -130,7 +130,14 @@ Item {
                         delta += 1.00;
                     }
 
-                    return "倒數" + parseInt(delta) + "天";
+                    let day = parseInt(delta);
+                    if (day == 0) {
+                        return "就在今天!!!";
+                    } else if (day > 0) {
+                        return "倒數" + day + "天";
+                    } else {
+                        return "已過去" + -day + "天";
+                    }
                 }
                 text: countdown
             }
