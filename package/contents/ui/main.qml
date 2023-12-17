@@ -20,6 +20,7 @@ Item {
 
     JsonLoader {
         id: jsonloader
+        property alias jsonobj: jsonloader.jsonObject
         source: plasmoid.configuration.dataConfigPath
     }
 
@@ -85,7 +86,10 @@ Item {
                 font.pixelSize: plasmoid.configuration.nameFontSize
 
                 property var name: {
-                    return jsonloader.jsonObject[idx].name;
+                    if (jsonloader.jsonobj[idx] === undefined) {
+                        return "";
+                    }
+                    return jsonloader.jsonobj[idx].name;
                 }
                 text: name
             }
@@ -103,7 +107,10 @@ Item {
                 font.pixelSize: plasmoid.configuration.dateFontSize
 
                 property var date_: {
-                    return jsonloader.jsonObject[idx].date;
+                    if (jsonloader.jsonobj[idx] === undefined) {
+                        return "";
+                    }
+                    return jsonloader.jsonobj[idx].date;
                 }
                 text: date_
             }
@@ -121,7 +128,10 @@ Item {
                 font.pixelSize: plasmoid.configuration.countdownFontSize
 
                 property var countdown: {
-                    let d_str = jsonloader.jsonObject[idx].date;
+                    if (jsonloader.jsonobj[idx] === undefined) {
+                        return "";
+                    }
+                    let d_str = jsonloader.jsonobj[idx].date;
                     let arr = d_str.split("/");
                     let d = new Date(parseInt(arr[0]), parseInt(arr[1]) - 1, parseInt(arr[2]), 0, 0, 0, 0)
                     let current_date = new Date();
